@@ -1,6 +1,6 @@
 {
   /**
-   * Union Types: OR
+   * Union Types: OR 😍
    * 할당하고 싶은 값만 타입으로 지정해 씁니다. 타입스크립트에서 많이 사용됨
    */
   type Direction = "left" | "right" | "up" | "down";
@@ -34,7 +34,7 @@
   // printLoginState(state)
   // success -> 🎊 body
   // fail -> 😂 reason
-  // 🤨
+  // 🤨 > discriminaged로 표현하는 게 더 좋은 코드
   function printLoginState(state: LoginState) {
     if ("response" in state) {
       console.log(`🎊 ${state.response.body}`);

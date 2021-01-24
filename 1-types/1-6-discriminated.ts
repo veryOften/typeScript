@@ -1,5 +1,5 @@
 {
-  // 😍 1-5 에 있는 코드보다 더 다은 코드
+  // 😍  Union 코드보다 더 다은 코드
   type SuccessState1 = {
     result: "success";
     response: {
