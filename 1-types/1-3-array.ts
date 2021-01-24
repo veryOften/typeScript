@@ -6,8 +6,9 @@
     // fruits.push()  -> 에러 발생
   }
 
-  // Tuple -> interface, type alias, class
+  // Tuple
   // 배열이긴 배열인데, 서로 다른 타입의 데이터를 배열에 담을 수 있음
+  // 튜플보다는 interface, type alias, class 사용 권장
   // 🤨
   let student: [string, number];
   student = ["name", 123];

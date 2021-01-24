@@ -31,6 +31,7 @@
 
   //  JavaScript => TypeScript
   //  Optional parameter
+  // 물음표 사용
   function printName(firstName: String, lastName?: String) {
     console.log(firstName);
     console.log(lastName);
@@ -40,12 +41,14 @@
   printName("Anna", undefined);
 
   // Default parameter
+  // something:string = 'default'
   function printMessage(message: string = "default message") {
     console.log(message);
   }
   printMessage();
 
   // Rest parameter
+  // ... rest
   function addNumbers(...numbers: number[]): number {
     return numbers.reduce((a, b) => a + b);
   }
