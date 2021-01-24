@@ -74,7 +74,7 @@
     }
   }
 
-  class AutomaticSugarMixer {
+  class CandySugarMixer {
     private getSugar() {
       console.log("Getting some sugar from candy...........");
       return true;
@@ -105,7 +105,7 @@
   }
 
   class SweetCoffeeMaker extends CoffeeMachine {
-    constructor(private beans: number, private sugar: AutomaticSugarMixer) {
+    constructor(private beans: number, private sugar: CandySugarMixer) {
       super(beans);
     }
     makeCoffee(shots: number): CoffeeCup {
@@ -118,7 +118,7 @@
     constructor(
       private beans: number,
       private milk: CheapMilksteamer,
-      private sugar: AutomaticSugarMixer
+      private sugar: CandySugarMixer
     ) {
       super(beans);
     }
@@ -132,19 +132,19 @@
   const machines: CoffeeMaker[] = [
     new CoffeeMachine(16),
     new caffeLatteMachin(16, "1", new CheapMilksteamer()),
-    new SweetCoffeeMaker(16, new AutomaticSugarMixer()),
+    new SweetCoffeeMaker(16, new CandySugarMixer()),
     new SweetCaffeLatteMachine(
       16,
       new CheapMilksteamer(),
-      new AutomaticSugarMixer()
+      new CandySugarMixer()
     ),
     new CoffeeMachine(16),
     new caffeLatteMachin(16, "1", new CheapMilksteamer()),
-    new SweetCoffeeMaker(16, new AutomaticSugarMixer()),
+    new SweetCoffeeMaker(16, new CandySugarMixer()),
     new SweetCaffeLatteMachine(
       16,
       new CheapMilksteamer(),
-      new AutomaticSugarMixer()
+      new CandySugarMixer()
     ),
   ];
 
