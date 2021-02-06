@@ -1,6 +1,6 @@
 {
   /**
-   * Intersection Types: &&
+   * Intersection Types: && 😍
    */
 
   type Student = {
