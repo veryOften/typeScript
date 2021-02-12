@@ -16,14 +16,22 @@ export class PageItemComponent extends BaseComponent {
         const container = this.element.querySelector(".page-item__body");
         child.attachTo(container);
     }
+    setOnCloseLister(listener) {
+        this.closeListener = listener;
+    }
 }
 export class PageComponent extends BaseComponent {
-    constructor() {
+    constructor(pageItemConstructor) {
         super('<ul class="page"></ul>');
+        this.pageItemConstructor = pageItemConstructor;
     }
     addChild(section) {
-        const item = new PageItemComponent();
+        const item = new this.pageItemConstructor();
         item.addChild(section);
-        item.attachTo(this.element, "beforebegin");
+        item.attachTo(this.element, "beforeend");
+        item.setOnCloseLister(() => {
+            console.log(this.element);
+            item.removeFrom(this.element);
+        });
     }
 }
